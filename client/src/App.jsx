@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./styles/global.css";
 import utilsStyle from "./styles/utils.module.css";
 import data from "./data/data.json";
@@ -8,6 +10,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 
 import NavigationBar from "./components/Navbar";
 import Products from "./components/Products";
+import Footer from "./components/Footer";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -45,6 +48,7 @@ function App() {
         <Container>
             <NavigationBar />
             {homePage}
+            <Footer />
         </Container>
     );
 }
