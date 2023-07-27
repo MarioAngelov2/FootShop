@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import { Card, Image, Button, Alert } from "react-bootstrap";
+import React, { useState } from "react";
+import { Card, Button, Alert } from "react-bootstrap";
 import style from "../styles/Product.module.css";
 import utilStyle from "../styles/utils.module.css";
 import { Rating } from "react-simple-star-rating";
@@ -32,7 +32,6 @@ function ShoesList({ product }) {
                 <div>
                     {showAlert ? (
                         <Alert
-                            
                             className={`${style.alertPopup} mt-3 mb-2`}
                             variant="success"
                             onClose={() => setShowAlert(false)}
