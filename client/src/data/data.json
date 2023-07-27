@@ -1,79 +1,160 @@
 {
-    "product1": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/952168/265780.jpg"
-    },
-    "product2": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/942823/265795.jpg"
-    },
-    "product3": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/775087/237694.jpg"
-    },
-    "product4": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/881887/265804.jpg"
-    },
-    "product5": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/770050/234376.jpg"
-    },
-    "product6": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/942913/265834.jpg"
-    },
-    "product7": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/548059/148801.jpg"
-    },
-    "product8": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/964669/277837.jpg"
-    },
-    "product9": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/741016/221578.jpg"
-    },
-    "product10": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/759250/171346.jpg"
-    },
-    "product11": {
-        "title": "NIKE AIR MAX 1 SC",
-        "price": "319",
-        "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
-        "rating": "",
-        "image": "https://static.footshop.com/716182/224437.jpg"
-    }
+    "shoes": [
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "1",
+            "image": "https://static.footshop.com/952168/265780.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "2",
+            "image": "https://static.footshop.com/942823/265795.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "3",
+            "image": "https://static.footshop.com/775087/237694.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "4",
+            "image": "https://static.footshop.com/881887/265804.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "5",
+            "image": "https://static.footshop.com/770050/234376.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "6",
+            "image": "https://static.footshop.com/942913/265834.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "7",
+            "image": "https://static.footshop.com/548059/148801.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "8",
+            "image": "https://static.footshop.com/964669/277837.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "9",
+            "image": "https://static.footshop.com/741016/221578.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "10",
+            "image": "https://static.footshop.com/759250/171346.jpg"
+        },
+        {
+            "title": "NIKE AIR MAX 1 SC",
+            "price": "319",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "11",
+            "image": "https://static.footshop.com/716182/224437.jpg"
+        }
+    ],
+    "bags": [
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "12",
+            "image": "https://static.footshop.com/575068/129970.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "13",
+            "image": "https://static.footshop.com/972307-full_product/295393.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "14",
+            "image": "https://static.footshop.com/570607-full_product/129913.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "15",
+            "image": "https://static.footshop.com/811990-full_product/50928.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "16",
+            "image": "https://static.footshop.com/946084-full_product/266131.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "17",
+            "image": "https://static.footshop.com/967750-full_product/278032.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "18",
+            "image": "https://static.footshop.com/967747-full_product/278029.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "19",
+            "image": "https://static.footshop.com/757582-full_product/238597.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "20",
+            "image": "https://static.footshop.com/967708-full_product/278041.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "21",
+            "image": "https://static.footshop.com/757549-full_product/238624.jpg"
+        },
+        {
+            "title": "BACKPACK NIKE BACKPACK",
+            "price": "239",
+            "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
+            "id": "22",
+            "image": "https://static.footshop.com/967723-full_product/277993.jpg"
+        }
+    ]
 }
