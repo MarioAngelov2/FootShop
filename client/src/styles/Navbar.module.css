@@ -1,0 +1,14 @@
+.navBarBody {
+    background-color: black;
+}
+
+.textColor {
+    color: white;
+}
+
+.navBarText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
