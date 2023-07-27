@@ -11,6 +11,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import NavigationBar from "./components/Navbar";
 import Products from "./components/Products";
 import Footer from "./components/Footer";
+import DropdownMenu from "./components/DropdownMenu";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -34,12 +35,13 @@ function App() {
 
     const homePage = (
         <>
-         
             {products.length > 0 ? productsGrid : <h4>No products to show</h4>}
             <div
                 className={`${utilsStyle.blockCenter} ${utilsStyle.flexCenter}`}
             >
-                <Button variant="outline-dark" className="mt-3 mb-5" >Load More</Button>
+                <Button variant="outline-dark" className="mt-3 mb-5">
+                    Load More
+                </Button>
             </div>
         </>
     );
@@ -47,6 +49,7 @@ function App() {
     return (
         <Container>
             <NavigationBar />
+            <DropdownMenu />
             {homePage}
             <Footer />
         </Container>
