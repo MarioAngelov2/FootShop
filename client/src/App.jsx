@@ -10,6 +10,7 @@ import NavigationBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import DropdownMenu from "./components/DropdownMenu";
 import ShoesData from "./components/ShoesData";
+import BagsData from "./components/BagsData";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             <DropdownMenu />
             <Routes>
                 <Route path="/shoes" element={<ShoesData />} />
+                <Route path="/bags" element={<BagsData />} />
             </Routes>
 
             <Footer />
