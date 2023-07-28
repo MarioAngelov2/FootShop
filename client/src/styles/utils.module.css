@@ -21,3 +21,12 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.marginTop {
+    margin-top: 33px;
+    white-space: nowrap;
+}
+
+.fontSize {
+    font-size: 0.9em;
+}
