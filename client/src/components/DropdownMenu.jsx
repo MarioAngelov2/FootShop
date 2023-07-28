@@ -2,23 +2,31 @@ import React from "react";
 import { Dropdown } from "react-bootstrap";
 import utilStyle from "../styles/utils.module.css";
 
-function DropdownMenu({ data, onSort }) {
+function DropdownMenu({ data, onSort, sortMethod }) {
     const handleSortChange = (eventKey) => {
         if (eventKey === "alphabeticalAZ") {
             let sortedData = [...data].sort((a, b) =>
                 a.title.localeCompare(b.title)
             );
+
+            sortMethod(eventKey);
             onSort(sortedData);
         } else if (eventKey === "alphabeticalZA") {
             let sortedData = [...data].sort((a, b) =>
                 b.title.localeCompare(a.title)
             );
+
+            sortMethod(eventKey);
             onSort(sortedData);
         } else if (eventKey === "lowestPrice") {
             let sortedData = [...data].sort((a, b) => a.price - b.price);
+
+            sortMethod(eventKey);
             onSort(sortedData);
         } else if (eventKey === "highestPrice") {
             let sortedData = [...data].sort((a, b) => b.price - a.price);
+
+            sortMethod(eventKey);
             onSort(sortedData);
         }
     };
