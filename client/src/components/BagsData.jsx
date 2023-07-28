@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import data from "../data/data.json";
 
 import utilsStyle from "../styles/utils.module.css";
 import BagsList from "./BagsList";
 import DropdownMenu from "./DropdownMenu";
+import { useFilter } from "../context/FilterContext";
+import { filterProducts } from "../utils/filterProducts";
+import { sortFilteredProducts } from "../utils/sortFilteredProducts";
 
-const productsPerRow = 10;
+const PRODUCTS_PER_LOAD = 10;
 
 function BagsData() {
     const [products, setProducts] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
-    const [next, setNext] = useState(productsPerRow);
+    const [next, setNext] = useState(PRODUCTS_PER_LOAD);
     const [sortedProducts, setSortedProducts] = useState([]);
+    const [selectetSortOption, setSelectetSortOption] = useState("");
+    const { filteredData } = useFilter();
 
     useEffect(() => {
         const productsArray = data.bags;
@@ -21,15 +26,32 @@ function BagsData() {
     }, []);
 
     const handleMoreProducts = () => {
-        setNext(next + productsPerRow);
+        setNext(next + PRODUCTS_PER_LOAD);
     };
 
     const handleSort = (sortedData) => {
         setSortedProducts(sortedData);
     };
 
+    const handleSortChange = (sortOption) => {
+        setSelectetSortOption(sortOption);
+    };
+
+    const filteredProducts = filterProducts(products, filteredData);
+
+    const sortedFilteredProducts = sortFilteredProducts(
+        filteredProducts,
+        selectetSortOption
+    );
+
     const productsToDisplay =
-        sortedProducts.length > 0 ? sortedProducts : products;
+    sortedFilteredProducts.length > 0
+      ? sortedFilteredProducts
+      : filteredProducts.length > 0
+      ? filteredProducts
+      : sortedProducts.length > 0
+      ? sortedProducts
+      : products;
 
     const productsGrid = (
         <Row xs={1} md={2} xl={3} xxl={4} className="g-4 mt-3 mb-4">
@@ -63,7 +85,11 @@ function BagsData() {
     );
     return (
         <div>
-            <DropdownMenu data={products} onSort={handleSort} />
+            <DropdownMenu
+                data={products}
+                onSort={handleSort}
+                sortMethod={handleSortChange}
+            />
             {bagsList}
         </div>
     );
