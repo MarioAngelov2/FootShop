@@ -90,7 +90,6 @@ function BagsData() {
                 onSort={handleSort}
                 sortMethod={handleSortChange}
             />
-            <span></span>
             {bagsList}
         </div>
     );
