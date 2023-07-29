@@ -9,13 +9,13 @@ import { useFilter } from "../context/FilterContext";
 import { filterProducts } from "../utils/filterProducts";
 import { sortFilteredProducts } from "../utils/sortFilteredProducts";
 
-const productsPerRow = 10;
+const PRODUCTS_PER_LOAD = 10;
 
 function ShoesData() {
     const [products, setProducts] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
     const [displayedProductsCount, setDisplayedProductsCount] =
-        useState(productsPerRow);
+        useState(PRODUCTS_PER_LOAD);
     const [sortedProducts, setSortedProducts] = useState([]);
     const [selectetSortOption, setSelectetSortOption] = useState("");
     const { filteredData } = useFilter();
@@ -27,7 +27,7 @@ function ShoesData() {
     }, []);
 
     const handleMoreProducts = () => {
-        setDisplayedProductsCount(displayedProductsCount + productsPerRow);
+        setDisplayedProductsCount(displayedProductsCount + PRODUCTS_PER_LOAD);
     };
 
     const handleSort = (sortedData) => {
