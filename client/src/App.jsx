@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import ShoesData from "./components/ShoesData";
 import BagsData from "./components/BagsData";
 import Filter from "./components/Filter";
+import Home from "./components/home";
 import { FilteringProvider } from "./context/FilterContext";
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
                     </Col>
                     <Col md={10}>
                         <Routes>
+                            <Route path="/home" element={<Home />} />
+                            <Route path="/" element={<ShoesData />} />
                             <Route path="/shoes" element={<ShoesData />} />
                             <Route path="/bags" element={<BagsData />} />
                         </Routes>
