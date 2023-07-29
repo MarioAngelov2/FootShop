@@ -30,3 +30,18 @@
 .fontSize {
     font-size: 0.9em;
 }
+
+.oldPrice {
+    font-size: 0.9em;
+    text-decoration: line-through;
+}
+
+.newPrice {
+    font-weight: 600;
+}
+
+.oldPriceDiv {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
