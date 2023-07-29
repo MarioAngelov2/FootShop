@@ -32,7 +32,10 @@ function DropdownMenu({ data, onSort, sortMethod, numberOfProductsDisplayed }) {
     };
 
     return (
-        <Dropdown onSelect={handleSortChange} className={utilStyle.flexGapBetween}>
+        <Dropdown
+            onSelect={handleSortChange}
+            className={utilStyle.flexGapBetween}
+        >
             <Dropdown.Toggle variant="outline" id="dropdown-basic">
                 Sort by
             </Dropdown.Toggle>
