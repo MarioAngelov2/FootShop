@@ -16,9 +16,9 @@ export const FilteringProvider = ({ children }) => {
             white: false,
             pink: false,
             yellow: false,
-            blue: false,
+            brown: false,
             black: false,
-            green: false,
+            olive: false,
         },
     });
 
