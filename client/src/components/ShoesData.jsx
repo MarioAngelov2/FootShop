@@ -5,6 +5,9 @@ import data from "../data/data.json";
 import utilsStyle from "../styles/utils.module.css";
 import ShoesList from "./ShoesList";
 import DropdownMenu from "./DropdownMenu";
+import { useFilter } from "../context/FilterContext";
+import { filterProducts } from "../utils/filterProducts";
+import { sortFilteredProducts } from "../utils/sortFilteredProducts";
 
 const productsPerRow = 10;
 
@@ -13,6 +16,8 @@ function ShoesData() {
     const [dataLoaded, setDataLoaded] = useState(false);
     const [next, setNext] = useState(productsPerRow);
     const [sortedProducts, setSortedProducts] = useState([]);
+    const [selectetSortOption, setSelectetSortOption] = useState("");
+    const { filteredData } = useFilter();
 
     useEffect(() => {
         const productsArray = data.shoes;
@@ -28,8 +33,25 @@ function ShoesData() {
         setSortedProducts(sortedData);
     };
 
+    const handleSortChange = (sortOption) => {
+        setSelectetSortOption(sortOption);
+    };
+
+    const filteredProducts = filterProducts(products, filteredData);
+
+    const sortedFilteredProducts = sortFilteredProducts(
+        filteredProducts,
+        selectetSortOption
+    );
+
     const productsToDisplay =
-        sortedProducts.length > 0 ? sortedProducts : products;
+        sortedFilteredProducts.length > 0
+            ? sortedFilteredProducts
+            : filteredProducts.length > 0
+            ? filteredProducts
+            : sortedProducts.length > 0
+            ? sortedProducts
+            : products;
 
     const productsGrid = (
         <Row xs={1} md={2} xl={3} xxl={4} className="g-4 mt-3 mb-4">
@@ -63,7 +85,11 @@ function ShoesData() {
     );
     return (
         <>
-            <DropdownMenu data={products} onSort={handleSort} />
+            <DropdownMenu
+                data={products}
+                onSort={handleSort}
+                sortMethod={handleSortChange}
+            />
             {shoesList}
         </>
     );
