@@ -14,7 +14,7 @@ const productsPerRow = 10;
 function ShoesData() {
     const [products, setProducts] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
-    const [next, setNext] = useState(productsPerRow);
+    const [displayedProductsCount, setDisplayedProductsCount] = useState(productsPerRow);
     const [sortedProducts, setSortedProducts] = useState([]);
     const [selectetSortOption, setSelectetSortOption] = useState("");
     const { filteredData } = useFilter();
@@ -26,7 +26,7 @@ function ShoesData() {
     }, []);
 
     const handleMoreProducts = () => {
-        setNext(next + productsPerRow);
+        setDisplayedProductsCount(displayedProductsCount + productsPerRow);
     };
 
     const handleSort = (sortedData) => {
@@ -55,12 +55,45 @@ function ShoesData() {
 
     const productsGrid = (
         <Row xs={1} md={2} xl={3} xxl={4} className="g-4 mt-3 mb-4">
-            {productsToDisplay?.slice(0, next).map((product) => (
-                <Col key={product.id}>
-                    <ShoesList product={product} />
-                </Col>
-            ))}
+            {productsToDisplay
+                ?.slice(0, displayedProductsCount)
+                .map((product) => (
+                    <Col key={product.id}>
+                        <ShoesList product={product} />
+                    </Col>
+                ))}
         </Row>
+    );
+
+    if (productsToDisplay && dataLoaded) {
+        if (displayedProductsCount > products.length) {
+            setDisplayedProductsCount(products.length);
+        }
+    }
+
+    const numberOfProductsDisplayed = (
+        <>
+            {productsToDisplay.length > 0 ? (
+                <span>
+                    Showing {displayedProductsCount} of {products.length}{" "}
+                    products
+                </span>
+            ) : null}
+        </>
+    );
+
+    const displayButton = (
+        <div className={`${utilsStyle.blockCenter} ${utilsStyle.flexCenter}`}>
+            {displayedProductsCount < productsToDisplay.length ? (
+                <Button
+                    onClick={handleMoreProducts}
+                    variant="outline-dark"
+                    className="mt-3 mb-5"
+                >
+                    Load More
+                </Button>
+            ) : null}
+        </div>
     );
 
     const shoesList = (
@@ -70,19 +103,10 @@ function ShoesData() {
             ) : (
                 <h4>No products to show</h4>
             )}
-            <div
-                className={`${utilsStyle.blockCenter} ${utilsStyle.flexCenter}`}
-            >
-                <Button
-                    onClick={handleMoreProducts}
-                    variant="outline-dark"
-                    className="mt-3 mb-5"
-                >
-                    Load More
-                </Button>
-            </div>
+            {displayButton}
         </>
     );
+
     return (
         <>
             <DropdownMenu
@@ -90,6 +114,7 @@ function ShoesData() {
                 onSort={handleSort}
                 sortMethod={handleSortChange}
             />
+            {numberOfProductsDisplayed}
             {shoesList}
         </>
     );
