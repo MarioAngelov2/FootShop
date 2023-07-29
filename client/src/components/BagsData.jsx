@@ -45,13 +45,13 @@ function BagsData() {
     );
 
     const productsToDisplay =
-    sortedFilteredProducts.length > 0
-      ? sortedFilteredProducts
-      : filteredProducts.length > 0
-      ? filteredProducts
-      : sortedProducts.length > 0
-      ? sortedProducts
-      : products;
+        sortedFilteredProducts.length > 0
+            ? sortedFilteredProducts
+            : filteredProducts.length > 0
+            ? filteredProducts
+            : sortedProducts.length > 0
+            ? sortedProducts
+            : products;
 
     const productsGrid = (
         <Row xs={1} md={2} xl={3} xxl={4} className="g-4 mt-3 mb-4">
@@ -90,6 +90,7 @@ function BagsData() {
                 onSort={handleSort}
                 sortMethod={handleSortChange}
             />
+            <span></span>
             {bagsList}
         </div>
     );
