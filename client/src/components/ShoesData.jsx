@@ -14,7 +14,8 @@ const productsPerRow = 10;
 function ShoesData() {
     const [products, setProducts] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
-    const [displayedProductsCount, setDisplayedProductsCount] = useState(productsPerRow);
+    const [displayedProductsCount, setDisplayedProductsCount] =
+        useState(productsPerRow);
     const [sortedProducts, setSortedProducts] = useState([]);
     const [selectetSortOption, setSelectetSortOption] = useState("");
     const { filteredData } = useFilter();
@@ -75,8 +76,7 @@ function ShoesData() {
         <>
             {productsToDisplay.length > 0 ? (
                 <span>
-                    Showing {displayedProductsCount} of {products.length}{" "}
-                    products
+                    {displayedProductsCount} of {products.length} products
                 </span>
             ) : null}
         </>
@@ -113,8 +113,8 @@ function ShoesData() {
                 data={products}
                 onSort={handleSort}
                 sortMethod={handleSortChange}
+                numberOfProductsDisplayed={numberOfProductsDisplayed}
             />
-            {numberOfProductsDisplayed}
             {shoesList}
         </>
     );

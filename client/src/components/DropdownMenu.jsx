@@ -2,7 +2,7 @@ import React from "react";
 import { Dropdown } from "react-bootstrap";
 import utilStyle from "../styles/utils.module.css";
 
-function DropdownMenu({ data, onSort, sortMethod }) {
+function DropdownMenu({ data, onSort, sortMethod, numberOfProductsDisplayed }) {
     const handleSortChange = (eventKey) => {
         if (eventKey === "alphabeticalAZ") {
             let sortedData = [...data].sort((a, b) =>
@@ -32,7 +32,7 @@ function DropdownMenu({ data, onSort, sortMethod }) {
     };
 
     return (
-        <Dropdown onSelect={handleSortChange}>
+        <Dropdown onSelect={handleSortChange} className={utilStyle.flexGapBetween}>
             <Dropdown.Toggle variant="outline" id="dropdown-basic">
                 Sort by
             </Dropdown.Toggle>
@@ -50,6 +50,7 @@ function DropdownMenu({ data, onSort, sortMethod }) {
                     Highest price
                 </Dropdown.Item>
             </Dropdown.Menu>
+            {numberOfProductsDisplayed}
         </Dropdown>
     );
 }
