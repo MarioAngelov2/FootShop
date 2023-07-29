@@ -1,6 +1,6 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
-import utilStyle from "../styles/utils.module.css";
+import utilStyle from "../../styles/utils.module.css";
 
 function DropdownMenu({ data, onSort, sortMethod, numberOfProductsDisplayed }) {
     const handleSortChange = (eventKey) => {

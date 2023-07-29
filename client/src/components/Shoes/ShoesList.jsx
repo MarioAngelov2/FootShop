@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap";
-import style from "../styles/Product.module.css";
-import utilStyle from "../styles/utils.module.css";
+import style from "../../styles/Product.module.css";
+import utilStyle from "../../styles/utils.module.css";
 import { Rating } from "react-simple-star-rating";
 
-function BagsList({ product }) {
+function ShoesList({ product }) {
     const [showAlert, setShowAlert] = useState(false);
 
     const handleAlert = () => {
@@ -53,4 +53,4 @@ function BagsList({ product }) {
     );
 }
 
-export default BagsList;
+export default ShoesList;

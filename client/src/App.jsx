@@ -6,12 +6,12 @@ import "./styles/global.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-import NavigationBar from "./components/Navbar";
-import Footer from "./components/Footer";
-import ShoesData from "./components/ShoesData";
-import BagsData from "./components/BagsData";
-import Filter from "./components/Filter";
-import Home from "./components/home";
+import NavigationBar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import ShoesData from "./components/Shoes/ShoesData";
+import BagsData from "./components/Bags/BagsData";
+import Filter from "./components/Filter/Filter";
+import Home from "./components/Home/Home";
 import { FilteringProvider } from "./context/FilterContext";
 
 function App() {

@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Button } from "react-bootstrap";
-import data from "../data/data.json";
+import data from "../../data/data.json";
 
-import utilsStyle from "../styles/utils.module.css";
-import BagsList from "./BagsList";
-import DropdownMenu from "./DropdownMenu";
-import { useFilter } from "../context/FilterContext";
-import { filterProducts } from "../utils/filterProducts";
-import { sortFilteredProducts } from "../utils/sortFilteredProducts";
+import utilsStyle from "../../styles/utils.module.css";
+import ShoesList from "./ShoesList";
+import DropdownMenu from "../Dropdown/DropdownMenu";
+import { useFilter } from "../../context/FilterContext";
+import { filterProducts } from "../../utils/filterProducts";
+import { sortFilteredProducts } from "../../utils/sortFilteredProducts";
 
 const PRODUCTS_PER_LOAD = 10;
 
-function BagsData() {
+function ShoesData() {
     const [products, setProducts] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
     const [displayedProductsCount, setDisplayedProductsCount] =
@@ -21,7 +21,7 @@ function BagsData() {
     const { filteredData } = useFilter();
 
     useEffect(() => {
-        const productsArray = data.bags;
+        const productsArray = data.shoes;
         setProducts(productsArray);
         setDataLoaded(true);
     }, []);
@@ -60,7 +60,7 @@ function BagsData() {
                 ?.slice(0, displayedProductsCount)
                 .map((product) => (
                     <Col key={product.id}>
-                        <BagsList product={product} />
+                        <ShoesList product={product} />
                     </Col>
                 ))}
         </Row>
@@ -96,7 +96,7 @@ function BagsData() {
         </div>
     );
 
-    const bagsList = (
+    const shoesList = (
         <>
             {productsToDisplay.length > 0 ? (
                 productsGrid
@@ -106,18 +106,18 @@ function BagsData() {
             {displayButton}
         </>
     );
-    
+
     return (
-        <div>
+        <>
             <DropdownMenu
                 data={products}
                 onSort={handleSort}
                 sortMethod={handleSortChange}
                 numberOfProductsDisplayed={numberOfProductsDisplayed}
             />
-            {bagsList}
-        </div>
+            {shoesList}
+        </>
     );
 }
 
-export default BagsData;
+export default ShoesData;

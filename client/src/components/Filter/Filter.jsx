@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Row, Col, DropdownButton, Dropdown } from "react-bootstrap";
 import { MDBCheckbox } from "mdb-react-ui-kit";
-import utilStyle from "../styles/utils.module.css";
-import { useFilter } from "../context/FilterContext";
+import utilStyle from "../../styles/utils.module.css";
+import { useFilter } from "../../context/FilterContext";
 
 function Filter() {
     const { filteredData, setFilteredData } = useFilter();
