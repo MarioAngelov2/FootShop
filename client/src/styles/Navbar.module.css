@@ -12,3 +12,8 @@
     align-items: center;
     gap: 50px;
 }
+
+.image {
+    width: 100px;
+    height: 100px;
+}
