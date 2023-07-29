@@ -19,6 +19,7 @@ export const FilteringProvider = ({ children }) => {
             brown: false,
             black: false,
             olive: false,
+            blue: false,
         },
     });
 
