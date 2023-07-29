@@ -5,77 +5,88 @@
             "price": "319",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "1",
-            "image": "https://static.footshop.com/952168/265780.jpg"
+            "image": "https://static.footshop.com/952168/265780.jpg",
+            "color": "white"
         },
         {
             "title": "AIKE AIR MAX 1 SC",
             "price": "321",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "2",
-            "image": "https://static.footshop.com/942823/265795.jpg"
+            "image": "https://static.footshop.com/942823/265795.jpg",
+            "color": "yellow"
         },
         {
             "title": "CIKE AIR MAX 1 SC",
             "price": "58",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "3",
-            "image": "https://static.footshop.com/775087/237694.jpg"
+            "image": "https://static.footshop.com/775087/237694.jpg",
+            "color": "brown"
         },
         {
             "title": "FIKE AIR MAX 1 SC",
             "price": "235",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "4",
-            "image": "https://static.footshop.com/881887/265804.jpg"
+            "image": "https://static.footshop.com/881887/265804.jpg",
+            "color": "black"
         },
         {
             "title": "QIKE AIR MAX 1 SC",
             "price": "142",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "5",
-            "image": "https://static.footshop.com/770050/234376.jpg"
+            "image": "https://static.footshop.com/770050/234376.jpg",
+            "color": "yellow"
         },
         {
             "title": "FIKE AIR MAX 1 SC",
             "price": "119",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "6",
-            "image": "https://static.footshop.com/942913/265834.jpg"
+            "image": "https://static.footshop.com/942913/265834.jpg",
+            "color": "olive"
         },
         {
             "title": "AIKE AIR MAX 1 SC",
             "price": "201",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "7",
-            "image": "https://static.footshop.com/548059/148801.jpg"
+            "image": "https://static.footshop.com/548059/148801.jpg",
+            "color": "pink"
         },
         {
             "title": "LIKE AIR MAX 1 SC",
             "price": "326",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "8",
-            "image": "https://static.footshop.com/964669/277837.jpg"
+            "image": "https://static.footshop.com/964669/277837.jpg",
+            "color": "red"
         },
         {
             "title": "MIKE AIR MAX 1 SC",
             "price": "542",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "9",
-            "image": "https://static.footshop.com/741016/221578.jpg"
+            "image": "https://static.footshop.com/741016/221578.jpg",
+            "color": "black"
         },
         {
             "title": "AIKE AIR MAX 1 SC",
             "price": "230",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "10",
-            "image": "https://static.footshop.com/759250/171346.jpg"
+            "image": "https://static.footshop.com/759250/171346.jpg",
+            "color": "white"
         },
         {
             "title": "YIKE AIR MAX 1 SC",
             "price": "199",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "11",
-            "image": "https://static.footshop.com/716182/224437.jpg"
+            "image": "https://static.footshop.com/716182/224437.jpg",
+            "color": "white"
         }
     ],
     "bags": [
