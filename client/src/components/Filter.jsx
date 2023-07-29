@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, DropdownButton, Dropdown } from "react-bootstrap";
 import { MDBCheckbox } from "mdb-react-ui-kit";
 import utilStyle from "../styles/utils.module.css";
@@ -6,6 +6,7 @@ import { useFilter } from "../context/FilterContext";
 
 function Filter() {
     const { filteredData, setFilteredData } = useFilter();
+    const [showFilteredOptions, setShowFilteredOptions] = useState(false);
 
     const handlePriceRangeChange = (event) => {
         const { name, checked } = event.target;
@@ -18,13 +19,20 @@ function Filter() {
         }));
     };
 
-    // const handleColorChange = (event) => {
-    //     const { name, checked } = event.target;
-    //     setSelectColor((prevColor) => ({
-    //         ...prevColor,
-    //         [name]: checked,
-    //     }));
-    // };
+    const handleColorChange = (event) => {
+        const { name, checked } = event.target;
+        setFilteredData((prevColor) => ({
+            ...prevColor,
+            selectColor: {
+                ...prevColor.selectColor,
+                [name]: checked,
+            },
+        }));
+    };
+
+    const toggleFilterOptions = () => {
+        setShowFilteredOptions(!showFilteredOptions);
+    };
 
     return (
         <Row className={utilStyle.fontSize}>
@@ -37,18 +45,14 @@ function Filter() {
                             id="all1"
                             label="All"
                             checked={filteredData.selectPriceRange.all}
-                            onChange={(event) =>
-                                handlePriceRangeChange(event)
-                            }
+                            onChange={(event) => handlePriceRangeChange(event)}
                         />
                         <MDBCheckbox
                             name="lowerRange"
                             id="lowerRange1"
                             label="0 - 50 BGN"
                             checked={filteredData.selectPriceRange.lowerRange}
-                            onChange={(event) =>
-                                handlePriceRangeChange(event)
-                            }
+                            onChange={(event) => handlePriceRangeChange(event)}
                         />
                         <MDBCheckbox
                             name="lowerMidRange"
@@ -57,18 +61,14 @@ function Filter() {
                             checked={
                                 filteredData.selectPriceRange.lowerMidRange
                             }
-                            onChange={(event) =>
-                                handlePriceRangeChange(event)
-                            }
+                            onChange={(event) => handlePriceRangeChange(event)}
                         />
                         <MDBCheckbox
                             name="midHighRange"
                             id="midHighRange1"
                             label="150 - 250 BGN"
                             checked={filteredData.selectPriceRange.midHighRange}
-                            onChange={(event) =>
-                                handlePriceRangeChange(event)
-                            }
+                            onChange={(event) => handlePriceRangeChange(event)}
                         />
                     </div>
                     <div className="mt-4">
@@ -77,50 +77,50 @@ function Filter() {
                             name="red"
                             id="red1"
                             label="Red"
-                            // checked={selectColor.red}
-                            // onChange={handleColorChange}
+                            checked={filteredData.selectColor.red}
+                            onChange={(event) => handleColorChange(event)}
                         />
                         <MDBCheckbox
                             name="white"
                             id="white1"
                             label="White"
-                            // checked={selectColor.white}
-                            // onChange={handleColorChange}
+                            checked={filteredData.selectColor.white}
+                            onChange={(event) => handleColorChange(event)}
                         />
                         <MDBCheckbox
                             name="pink"
                             id="pinl1"
                             label="Pink"
-                            // checked={selectColor.pink}
-                            // onChange={handleColorChange}
+                            checked={filteredData.selectColor.pink}
+                            onChange={(event) => handleColorChange(event)}
                         />
                         <MDBCheckbox
                             name="yellow"
                             id="yellow1"
                             label="Yellow"
-                            // checked={selectColor.yellow}
-                            // onChange={handleColorChange}
+                            checked={filteredData.selectColor.yellow}
+                            onChange={(event) => handleColorChange(event)}
                         />
                         <MDBCheckbox
-                            name="blue"
-                            id="blue1"
-                            label="Blue"
-                            // checked={selectColor.blue}
-                            // onChange={handleColorChange}
+                            name="brown"
+                            id="brown1"
+                            label="Brown"
+                            checked={filteredData.selectColor.brown}
+                            onChange={(event) => handleColorChange(event)}
                         />
                         <MDBCheckbox
                             name="black"
                             id="black1"
                             label="Black"
-                            // checked={selectColor.black}
-                            // onChange={handleColorChange}
+                            checked={filteredData.selectColor.black}
+                            onChange={(event) => handleColorChange(event)}
                         />
                         <MDBCheckbox
-                            name="green"
-                            id="green1"
-                            label="Green"
-                            // checked={selectColor.green}
-                            // onChange={handleColorChange}
+                            name="olive"
+                            id="olive1"
+                            label="Olive"
+                            checked={filteredData.selectColor.olive}
+                            onChange={(event) => handleColorChange(event)}
                         />
                     </div>
                 </div>
@@ -130,10 +130,55 @@ function Filter() {
                     title="Filter"
                     variant="outline-black"
                     block="true"
+                    onClick={toggleFilterOptions}
                 >
-                    <Dropdown.Item>Action 1</Dropdown.Item>
-                    <Dropdown.Item>Action 2</Dropdown.Item>
-                    <Dropdown.Item>Action 3</Dropdown.Item>
+                    {showFilteredOptions && (
+                        <div>
+                            <h6 className="mb-4">Price</h6>
+                            <MDBCheckbox
+                                name="all"
+                                id="all1-small"
+                                label="All"
+                                checked={filteredData.selectPriceRange.all}
+                                onChange={(event) =>
+                                    handlePriceRangeChange(event)
+                                }
+                            />
+                            <MDBCheckbox
+                                name="lowerRange"
+                                id="lowerRange1-small"
+                                label="0 - 50 BGN"
+                                checked={
+                                    filteredData.selectPriceRange.lowerRange
+                                }
+                                onChange={(event) =>
+                                    handlePriceRangeChange(event)
+                                }
+                            />
+                            <MDBCheckbox
+                                name="lowerMidRange"
+                                id="lowerMidRange1-small"
+                                label="50 - 100 BGN"
+                                checked={
+                                    filteredData.selectPriceRange.lowerMidRange
+                                }
+                                onChange={(event) =>
+                                    handlePriceRangeChange(event)
+                                }
+                            />
+                            <MDBCheckbox
+                                name="midHighRange"
+                                id="midHighRange1-small"
+                                label="150 - 250 BGN"
+                                checked={
+                                    filteredData.selectPriceRange.midHighRange
+                                }
+                                onChange={(event) =>
+                                    handlePriceRangeChange(event)
+                                }
+                            />
+                        </div>
+                    )}
                 </DropdownButton>
             </Col>
         </Row>
