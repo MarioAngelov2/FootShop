@@ -38,6 +38,8 @@ export function filterProducts(products, filteredData) {
             return product.color === "black";
         } else if (filteredData.selectColor.olive) {
             return product.color === "olive";
+        } else if (filteredData.selectColor.blue) {
+            return product.color === "blue";
         }
 
         return false;
