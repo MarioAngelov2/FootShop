@@ -96,6 +96,7 @@
         {
             "title": "FACKPACK NIKE BACKPACK",
             "price": "199",
+            "discountPrice": "99",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "12",
             "image": "https://static.footshop.com/575068/129970.jpg"
@@ -110,6 +111,7 @@
         {
             "title": "NACKPACK NIKE BACKPACK",
             "price": "139",
+            "discountPrice": "60",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "14",
             "image": "https://static.footshop.com/570607-full_product/129913.jpg"
@@ -124,6 +126,7 @@
         {
             "title": "CACKPACK NIKE BACKPACK",
             "price": "79",
+            "discountPrice": "29",
             "description": "Дизайн с класическия въздушен балон и голям избор от модели и цветове на Air Max. Всички господа могат да избират точно според техните нужди и вкусове.",
             "id": "16",
             "image": "https://static.footshop.com/946084-full_product/266131.jpg"
