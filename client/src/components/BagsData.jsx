@@ -14,7 +14,8 @@ const PRODUCTS_PER_LOAD = 10;
 function BagsData() {
     const [products, setProducts] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
-    const [next, setNext] = useState(PRODUCTS_PER_LOAD);
+    const [displayedProductsCount, setDisplayedProductsCount] =
+        useState(PRODUCTS_PER_LOAD);
     const [sortedProducts, setSortedProducts] = useState([]);
     const [selectetSortOption, setSelectetSortOption] = useState("");
     const { filteredData } = useFilter();
@@ -26,7 +27,7 @@ function BagsData() {
     }, []);
 
     const handleMoreProducts = () => {
-        setNext(next + PRODUCTS_PER_LOAD);
+        setDisplayedProductsCount(displayedProductsCount + PRODUCTS_PER_LOAD);
     };
 
     const handleSort = (sortedData) => {
@@ -55,12 +56,44 @@ function BagsData() {
 
     const productsGrid = (
         <Row xs={1} md={2} xl={3} xxl={4} className="g-4 mt-3 mb-4">
-            {productsToDisplay?.slice(0, next).map((product) => (
-                <Col key={product.id}>
-                    <BagsList product={product} />
-                </Col>
-            ))}
+            {productsToDisplay
+                ?.slice(0, displayedProductsCount)
+                .map((product) => (
+                    <Col key={product.id}>
+                        <BagsList product={product} />
+                    </Col>
+                ))}
         </Row>
+    );
+
+    if (productsToDisplay && dataLoaded) {
+        if (displayedProductsCount > products.length) {
+            setDisplayedProductsCount(products.length);
+        }
+    }
+
+    const numberOfProductsDisplayed = (
+        <>
+            {productsToDisplay.length > 0 ? (
+                <span>
+                    {displayedProductsCount} of {products.length} products
+                </span>
+            ) : null}
+        </>
+    );
+
+    const displayButton = (
+        <div className={`${utilsStyle.blockCenter} ${utilsStyle.flexCenter}`}>
+            {displayedProductsCount < productsToDisplay.length ? (
+                <Button
+                    onClick={handleMoreProducts}
+                    variant="outline-dark"
+                    className="mt-3 mb-5"
+                >
+                    Load More
+                </Button>
+            ) : null}
+        </div>
     );
 
     const bagsList = (
@@ -70,25 +103,17 @@ function BagsData() {
             ) : (
                 <h4>No products to show</h4>
             )}
-            <div
-                className={`${utilsStyle.blockCenter} ${utilsStyle.flexCenter}`}
-            >
-                <Button
-                    onClick={handleMoreProducts}
-                    variant="outline-dark"
-                    className="mt-3 mb-5"
-                >
-                    Load More
-                </Button>
-            </div>
+            {displayButton}
         </>
     );
+    
     return (
         <div>
             <DropdownMenu
                 data={products}
                 onSort={handleSort}
                 sortMethod={handleSortChange}
+                numberOfProductsDisplayed={numberOfProductsDisplayed}
             />
             {bagsList}
         </div>
