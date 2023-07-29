@@ -11,6 +11,15 @@ function ShoesList({ product }) {
         setShowAlert(true);
     };
 
+    const isDiscountedPrice = product.discountPrice ? (
+        <>
+            <span className={utilStyle.oldPrice}>{product.price}</span>
+            <span className={utilStyle.newPrice}>{product.discountPrice} BGN</span>
+        </>
+    ) : (
+        <span>{product.price} BGN</span>
+    );
+
     return (
         <Card className={style.productCard}>
             <Card.Header className={style.cardHeader}>
@@ -26,7 +35,7 @@ function ShoesList({ product }) {
                     {product.description}
                 </Card.Text>
                 <div className={utilStyle.flexGapBetween}>
-                    <span>{product.price} BGN</span>
+                    <div className={utilStyle.oldPriceDiv}>{isDiscountedPrice}</div>
                     <Rating size={23} />
                 </div>
                 <div>
