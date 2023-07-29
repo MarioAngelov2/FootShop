@@ -110,6 +110,13 @@ function FilterMenuBigScreen() {
                     checked={filteredData.selectColor.olive}
                     onChange={(event) => handleColorChange(event)}
                 />
+                   <MDBCheckbox
+                    name="blue"
+                    id="blue1"
+                    label="Blue"
+                    checked={filteredData.selectColor.blue}
+                    onChange={(event) => handleColorChange(event)}
+                />
             </div>
         </>
     );
