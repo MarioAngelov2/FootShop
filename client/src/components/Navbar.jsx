@@ -1,6 +1,7 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Image } from "react-bootstrap";
 import navStyle from "../styles/Navbar.module.css";
+import logo2 from '../../public/logo3.png'
 
 function NavigationBar() {
     return (
@@ -9,10 +10,10 @@ function NavigationBar() {
             data-bs-theme="light"
             sticky="top"
             expand="md"
-            className={`pb-3 ${navStyle.navBarBody}`}
+            className={`${navStyle.navBarBody}`}
         >
             <Container>
-                <Navbar.Brand>FOOT SHOP</Navbar.Brand>
+                <Image src={logo2} className={navStyle.image} roundedCircle/>
                 <Navbar.Toggle aria-controls="main-navbar" />
                 <Navbar.Collapse id="main-navbar">
                     <Nav className="ms-auto">
