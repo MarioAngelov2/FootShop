@@ -45,13 +45,6 @@ function FilterMenuSmallScreen() {
                     <div>
                         <h6 className="mb-4">Price</h6>
                         <MDBCheckbox
-                            name="all"
-                            id="all1-small"
-                            label="Above 250 BGN"
-                            checked={filteredData.selectPriceRange.all}
-                            onChange={(event) => handlePriceRangeChange(event)}
-                        />
-                        <MDBCheckbox
                             name="lowerRange"
                             id="lowerRange1-small"
                             label="0 - 50 BGN"
@@ -72,6 +65,13 @@ function FilterMenuSmallScreen() {
                             id="midHighRange1-small"
                             label="150 - 250 BGN"
                             checked={filteredData.selectPriceRange.midHighRange}
+                            onChange={(event) => handlePriceRangeChange(event)}
+                        />
+                        <MDBCheckbox
+                            name="all"
+                            id="all1-small"
+                            label="Above 250 BGN"
+                            checked={filteredData.selectPriceRange.all}
                             onChange={(event) => handlePriceRangeChange(event)}
                         />
                         <div className="mt-4">

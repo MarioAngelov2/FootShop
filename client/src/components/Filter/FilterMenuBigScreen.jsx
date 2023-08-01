@@ -31,13 +31,6 @@ function FilterMenuBigScreen() {
             <div>
                 <h6 className="mb-4">Price</h6>
                 <MDBCheckbox
-                    name="all"
-                    id="all1"
-                    label="Above 250 BGN"
-                    checked={filteredData.selectPriceRange.all}
-                    onChange={(event) => handlePriceRangeChange(event)}
-                />
-                <MDBCheckbox
                     name="lowerRange"
                     id="lowerRange1"
                     label="0 - 50 BGN"
@@ -56,6 +49,13 @@ function FilterMenuBigScreen() {
                     id="midHighRange1"
                     label="150 - 250 BGN"
                     checked={filteredData.selectPriceRange.midHighRange}
+                    onChange={(event) => handlePriceRangeChange(event)}
+                />
+                <MDBCheckbox
+                    name="all"
+                    id="all1"
+                    label="Above 250 BGN"
+                    checked={filteredData.selectPriceRange.all}
                     onChange={(event) => handlePriceRangeChange(event)}
                 />
             </div>
@@ -110,7 +110,7 @@ function FilterMenuBigScreen() {
                     checked={filteredData.selectColor.olive}
                     onChange={(event) => handleColorChange(event)}
                 />
-                   <MDBCheckbox
+                <MDBCheckbox
                     name="blue"
                     id="blue1"
                     label="Blue"
