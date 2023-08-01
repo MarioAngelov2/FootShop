@@ -31,9 +31,9 @@ function FilterMenuBigScreen() {
             <div>
                 <h6 className="mb-4">Price</h6>
                 <MDBCheckbox
-                    name="Above 250 BGN"
+                    name="all"
                     id="all1"
-                    label="All"
+                    label="Above 250 BGN"
                     checked={filteredData.selectPriceRange.all}
                     onChange={(event) => handlePriceRangeChange(event)}
                 />
