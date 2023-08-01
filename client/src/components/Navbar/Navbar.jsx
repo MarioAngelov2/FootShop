@@ -17,9 +17,9 @@ function NavigationBar() {
                 <Navbar.Collapse id="main-navbar">
                     <Nav className="ms-auto">
                         <div className={`${navStyle.navBarText}`}>
-                            <Link to="/home">Home</Link>
-                            <Link to="/shoes">Shoes</Link>
-                            <Link to="/bags">Bags</Link>
+                            <Nav.Link href="/home">Home</Nav.Link>
+                            <Nav.Link href="/shoes">Shoes</Nav.Link>
+                            <Nav.Link href="/bags">Bags</Nav.Link>
                         </div>
                     </Nav>
                 </Navbar.Collapse>
