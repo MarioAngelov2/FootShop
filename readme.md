@@ -12,6 +12,7 @@ Used libraries:
 - Material Design for Bootstrap
 - React Simple Star Rating
 - React Router Dom
+- React Context
 
 ### Usage
 
@@ -34,6 +35,6 @@ Used libraries:
 <img src="public/../client/public/homepage.png">
 <img src="public/../client/public/bagspage.png">
 <img src="public/../client/public/shoespage.png">
-<img src="public/../client/public/mobilebags.png">
-<img src="public/../client/public/mobileshoes.png">
+<img width="400" src="public/../client/public/mobilebags.png">
+<img width="400" src="public/../client/public/mobileshoes.png">
 
