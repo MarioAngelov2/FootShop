@@ -4,7 +4,7 @@
 
 ## Details
 The `Foot Shop` is a simple website where users can explore and search for various shoes, bags, accessories and more. 
-The application was build using Vite + React. The structure of it is Header, Hero page, Filter menu, Product grid and Footer. Every product page has implemented an algorithm for sorting. The user can select from several sorting methods: lowest price, highest price, alphabetical a-z, alphabetical z-a. In addition there is a filter menu which provides an easy way to filter the currently displayed products from price range and different color. 
+The application was build using Vite + React. The structure of it is Header, Hero page, Filter menu, Product grid and Footer. The data is hardcoded and retreived from `JSON` file. Every product page has implemented an algorithm for sorting. The user can select from several sorting methods: lowest price, highest price, alphabetical a-z, alphabetical z-a. In addition there is a filter menu which provides an easy way to filter the currently displayed products from price range and different color. 
 The product pages have a counter which displays how many products are currently displayed from the total quantity and a button `Load more` which loads more products to the page in order to avoid displaying all at once. 
 
 Used libraries: 
