@@ -45,7 +45,7 @@ function FilterMenuSmallScreen() {
                     <div>
                         <h6 className="mb-4">Price</h6>
                         <MDBCheckbox
-                            name="all"
+                            name="Above 250 BGN"
                             id="all1-small"
                             label="All"
                             checked={filteredData.selectPriceRange.all}
