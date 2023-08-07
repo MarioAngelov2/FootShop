@@ -26,7 +26,7 @@ Used libraries:
 
 - Client `cd client` `npm i` `npm run dev`
 
-### Feafures
+### Features
 
 - lowest price 
 - highest price 
